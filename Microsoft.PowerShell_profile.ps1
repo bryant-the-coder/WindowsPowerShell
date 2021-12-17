@@ -1,7 +1,6 @@
 Invoke-Expression -Command $(gh completion -s powershell | Out-String)
 
 # Delete if you dont want
-Import-Module PSReadLine
 Import-Module Terminal-Icons
 Import-Module posh-git
 Import-Module oh-my-posh
