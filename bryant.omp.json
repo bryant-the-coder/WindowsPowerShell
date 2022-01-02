@@ -7,21 +7,19 @@
 			"segments": [
 				{
 					"type": "session",
-					"style": "diamond",
-					"foreground": "#100e23",
-					"background": "#45F1C2",
-					"leading_diamond": "\uE0B6",
-					"trailing_diamond": "\uE0B0",
+					"style": "plain",
+					"foreground": "#45F1C2",
 					"properties": {
+						"prefix": "\uf508 ",
+						"postfix": " on",
 						"template": "{{ .UserName }}"
 					}
 				},
+
 				{
 					"type": "path",
-					"style": "powerline",
-					"powerline_symbol": "\uE0B0",
-					"foreground": "#100e23",
-					"background": "#0CA0D8",
+					"style": "plain",
+					"foreground": "#0CA0D8",
 					"properties": {
 						"style": "full",
 						"prefix": " \uf07b ",
@@ -30,39 +28,12 @@
 				},
 				{
 					"type": "git",
-					"style": "powerline",
-					"powerline_symbol": "\uE0B0",
-					"foreground": "#011627",
-					"background": "#33ff66",
-					"background_templates": [
-						"{{ if or (.Working.Changed) (.Staging.Changed) }}#33ff66{{ end }}",
-						"{{ if and (gt .Ahead 0) (gt .Behind 0) }}#33ff66{{ end }}",
-						"{{ if gt .Ahead 0 }}#33ff66{{ end }}",
-						"{{ if gt .Behind 0 }}#33ff66{{ end }}"
-					],
+					"style": "plain",
+					"foreground": "#ffffff",
 					"properties": {
 						"branch_icon": "\ue725 ",
 						"fetch_status": true,
-						"fetch_upstream_icon": true,
 						"template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#33ff66> \uF046 {{ .Staging.String }}</>{{ end }}"
-					}
-				}
-			]
-		},
-		{
-			"type": "prompt",
-			"alignment": "right",
-			"segments": [
-				{
-					"type": "time",
-					"style": "diamond",
-					"invert_powerlind": true,
-					"leading_diamond": "\uE0B2",
-					"trailing_diamond": "\uE0B4",
-					"background": "#ffc400",
-					"foreground": "#100e23",
-					"properties": {
-						"time_format": "15:04"
 					}
 				}
 			]
@@ -73,21 +44,12 @@
 			"newline": true,
 			"segments": [
 				{
-					"type": "root",
-					"style": "plain",
-					"foreground": "#cd5e42",
-					"properties": {
-						"prefix": "",
-						"root_icon": "\ue3bf"
-					}
-				},
-				{
 					"type": "text",
 					"style": "plain",
 					"foreground": "#eeff00",
 					"properties": {
 						"prefix": "",
-						"text": "\u276F"
+						"text": "$"
 					}
 				}
 			]
