@@ -7,3 +7,9 @@ Import-Module Terminal-Icons
 # oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
 
 Invoke-Expression (&starship init powershell)
+
+# Aliases
+Set-Alias -Name vim -Value nvim
+Set-Alias -Name vi -Value nvim
+Set-Alias lazy lazygit
+Set-Alias cl clear
